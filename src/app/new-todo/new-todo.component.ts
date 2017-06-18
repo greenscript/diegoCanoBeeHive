@@ -28,7 +28,7 @@ export class NewTodoComponent implements OnInit {
         false
       )
     );
-    console.log(this.todos);
+    this.title = '';
   }
 
 }
