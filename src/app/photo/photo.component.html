@@ -1,14 +1,16 @@
-<p><strong>{{photo.getTitle()}}</strong></p>
-<div class="photo-container col-xs-12 flex-center no-padding">
-  <img
-    (click)="smModal.show()"
-    class="img-responsive"
-    [src]="photo.getThumbnailUrl()"
-    popover="Click to see image"
-    placement="top"
-    triggers="mouseenter:mouseleave"
-    container="body"
-    alt="">
+<div class="col-xs-12 no-padding" style="margin-top: 10px;">
+  <p><strong>Photo's Title: {{photo.getTitle()}}</strong></p>
+  <div class="photo-container col-xs-12 flex-center no-padding">
+    <img
+      (click)="smModal.show()"
+      class="img-responsive"
+      [src]="photo.getThumbnailUrl()"
+      popover="Click to see image"
+      placement="top"
+      triggers="mouseenter:mouseleave"
+      container="body"
+      alt="">
+  </div>
 </div>
 
 <div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
