@@ -1,0 +1,18 @@
+<div class="todo-container col-xs-12 no-padding">
+  <div class="col-xs-12 col-sm-8">
+    <p [ngClass]="{'checked': todo.completed}">{{todo.getTitle()}}</p>
+  </div>
+  <div class="col-xs-12 col-sm-4 flex-center">
+    <input
+      type="checkbox"
+      id="{{index}}"
+      class="checkbox"
+      [(ngModel)]="todo.completed"/>
+    <label
+      for="{{index}}"
+      popover="Mark as done/undone"
+      placement="top"
+      triggers="mouseenter:mouseleave">
+    </label>
+  </div>
+</div>

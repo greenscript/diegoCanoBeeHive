@@ -1,0 +1,30 @@
+<p><strong>{{photo.getTitle()}}</strong></p>
+<div class="photo-container col-xs-12 flex-center no-padding">
+  <img
+    (click)="smModal.show()"
+    class="img-responsive"
+    [src]="photo.getThumbnailUrl()"
+    popover="Click to see image"
+    placement="top"
+    triggers="mouseenter:mouseleave"
+    container="body"
+    alt="">
+</div>
+
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="col-xs-12 modal-title pull-left">{{photo.getTitle()}}</h3>
+      </div>
+      <div class="modal-body">
+        <span class="flex-center">
+          <img class="img-responsive bee-modal-image" [src]="photo.getUrl()" alt="big-avatar">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

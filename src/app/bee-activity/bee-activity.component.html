@@ -1,0 +1,39 @@
+<section class="hidden-xs">
+  <section class="col-xs-6 col-sm-4 col-md-4 col-lg-4 posts column">
+    <h2>{{currentBeeTitle}}'s Posts</h2>
+    <app-posts [allPosts]="allPosts" [posts]="posts">Loading Posts...</app-posts>
+  </section>
+  <section class="col-xs-2 col-sm-4 col-md-4 col-lg-4 column albums">
+    <h2>{{currentBeeTitle}}'s Albums</h2>
+    <app-albums
+      [albums]="albums"
+      [currentUserAlbum]="currentUserAlbum">
+        Loading Albums...
+    </app-albums>
+  </section>
+  <section class="col-xs-2 col-sm-4 col-md-4 col-lg-4 column todos">
+    <h2>{{currentBeeTitle}}'s Todos</h2>
+    <app-todos [todos]="todos"></app-todos>
+  </section>
+</section>
+
+<section class="hidden-sm hidden-md hidden-lg">
+  <section class="col-xs-12 activity-mobile no-padding">
+    <div *ngIf="activePosts" class="posts column">
+      <h2>{{currentMobileTitle}}</h2>
+      <app-posts [posts]="posts">Loading Posts...</app-posts>
+    </div>
+    <div *ngIf="activeAlbum" class="albums column">
+      <h2>{{currentMobileTitle}}</h2>
+      <app-albums
+        [albums]="albums"
+        [currentUserAlbum]="currentUserAlbum ">
+          Loading Albums...
+      </app-albums>
+    </div>
+    <div *ngIf="activeTodos" class="todos column">
+      <h2>{{currentMobileTitle}}</h2>
+      <app-todos [todos]="todos"></app-todos>
+    </div>
+  </section>
+</section>

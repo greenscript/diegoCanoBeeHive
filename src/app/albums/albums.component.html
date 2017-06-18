@@ -1,0 +1,10 @@
+<section class="col-xs-12 no-padding">
+  <div *ngIf="!currentUserAlbum">
+    <div class="albums-container" *ngFor="let album of albums; let i = index;">
+      <app-album [album]="album"></app-album>
+    </div>
+  </div>
+  <div *ngIf="currentUserAlbum">
+    <app-album [album]="currentUserAlbum"></app-album>
+  </div>
+</section>

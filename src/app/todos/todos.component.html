@@ -1,0 +1,4 @@
+<div *ngFor="let todo of todos; let i = index;">
+  <app-todo [todo]="todo" [index]="i"></app-todo>
+</div>
+<app-new-todo [todos]="todos"></app-new-todo>

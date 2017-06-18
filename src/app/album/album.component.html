@@ -1,0 +1,6 @@
+<div class="col-xs-12 no-padding">
+  <h4>{{album.getTitle()}}</h4>
+  <div *ngFor="let photo of album.getPhotos()">
+    <app-photo [photo]="photo"></app-photo>
+  </div>
+</div>

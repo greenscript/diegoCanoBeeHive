@@ -1,0 +1,10 @@
+<section class="col-xs-12 no-padding">
+  <div class="posts-container" *ngFor="let post of posts; let i = index;">
+    <app-post
+      [post]="post"
+      [index]="i">
+    </app-post>
+    <hr>
+  </div>
+  <app-new-post [allPosts]="allPosts" [posts]="posts"></app-new-post>
+</section>

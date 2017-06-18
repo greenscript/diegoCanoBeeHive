@@ -1,0 +1,28 @@
+<main>
+  <section class="col-xs-3 col-sm-1 col-md-1 col-lg-1 bees column">
+    <h2 class="bees-title">Bees</h2>
+    <app-bees
+      (sendPosts)="receivePosts($event)"
+      (sendAlbums)="receiveAlbums($event)"
+      (sendTodos)="receiveTodos($event)"
+      (sendBee)="receiveBee($event)"
+      (sendMobileTitle)="receiveCurrentMobileTitle($event)"
+      [bees]="bees">
+      Loading Bees...
+    </app-bees>
+  </section>
+  <section class="col-xs-9 col-sm-11 col-md-11 col-lg-11 no-padding">
+    <app-bee-activity
+      [posts]="posts"
+      [albums]="albums"
+      [todos]="todos"
+      [allPosts]="allPosts"
+      [currentUserAlbum]="currentUserAlbum"
+      [currentBeeTitle]="currentBeeTitle"
+      [activePosts]="activePosts"
+      [activeTodos]="activeTodos"
+      [activeAlbum]="activeAlbum"
+      [currentMobileTitle]="currentMobileTitle">
+    </app-bee-activity>
+  </section>
+</main>

@@ -1,0 +1,12 @@
+<section class="col-xs-12 no-padding">
+  <div class="bees-container" *ngFor="let bee of bees;">
+    <app-bee
+      (currentBeePosts)="receiveBeePosts($event)"
+      (currentBeeAlbum)="receiveCurrentAlbum($event)"
+      (currentBeeTodos)="receiveCurrentTodos($event)"
+      (currentMobileTitle)="receiveCurrentMobileTitle($event)"
+      (currentBee)="receiveCurrentBee($event)"
+      [bee]="bee">
+    </app-bee>
+  </div>
+</section>
